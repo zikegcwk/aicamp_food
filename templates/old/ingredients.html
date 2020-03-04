@@ -1,0 +1,15 @@
+<form method=post enctype=multipart/form-data>
+  <input type="file" id="myFile" name="file">
+  <input type="submit">
+</form>
+
+
+<h1>Ingredient Score Made by AI</p>
+
+<table>
+    {% for ingredient in ingredient_ls %}
+    <tr>
+        <td>{{ ingredient['ingredient'] }}</td><td>{{ ingredient['score'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
