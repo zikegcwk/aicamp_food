@@ -6,18 +6,18 @@ import io
 from werkzeug.utils import secure_filename
 import time
 
-UPLOAD_FOLDER = '/home/aicamp/test_app/uploads'
+UPLOAD_FOLDER = '/home/aicamp/aicamp_food/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/aicamp/test_app/OcrTest1-a67fa706600c.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/aicamp/aicamp_food/OcrTest1-a67fa706600c.json"
 client = vision.ImageAnnotatorClient()
 
 # define some help functions.
 def get_ingredient_score():
-    score_path = '/home/aicamp/test_app/ingredient_score.csv'
+    score_path = '/home/aicamp/aicamp_food/ingredient_score.csv'
     ingredients = []
     with open(score_path, 'r') as f:
         reader = csv.DictReader(f)
@@ -79,7 +79,7 @@ def index_controller():
 def results_controller(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
-    # image_path = '/home/aicamp/test_app/img/meme.jpg'
+    # image_path = '/home/aicamp/aicamp_food/img/meme.jpg'
     texts = detect_text(client, image_path)
     # print(texts)
     descriptions = []
