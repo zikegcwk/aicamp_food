@@ -340,7 +340,7 @@ WeasyPrint==0.42.3
 webencodings==0.5.1
 WebOb==1.8.2
 WebTest==2.0.30
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 wheezy.caching==0.1.114
 wheezy.core==0.1.140
 wheezy.html==0.1.147
