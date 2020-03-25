@@ -103,7 +103,13 @@
                 <div class="title-block mbr-col-sm-12 mbr-col-md-12">
 
                     <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white display-2">We found these ingredients</h2>
-                    <p class="mbr-text mbr-fonts-style mbr-white mbr-pt-2 display-7">{{ descriptions }}</p>
+                    <p class="mbr-text mbr-fonts-style mbr-white mbr-pt-2 display-7">
+                        <ul>
+                        {% for ingredient in descriptions %}
+                            <li>ingredient: {{ingredient.candy_name}}, ingredient score: {{ingredient.candy_score}}</li>
+                        {% endfor %}
+                        </ul>
+                    </p>
 
                 </div>
             </div>
