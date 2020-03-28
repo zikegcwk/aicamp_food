@@ -5,39 +5,34 @@ import os
 import io
 from werkzeug.utils import secure_filename
 from fuzzywuzzy import process
-
-
+from data_loading import get_ingredient_score, get_candies, get_ingredients, get_good_candies, get_bad_candies
+import random
 
 here = os.getcwd()
 UPLOAD_FOLDER = os.path.join(here, 'uploads')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(here, "ocrtest1-266400-ac050984ba1b.json")
 client = vision.ImageAnnotatorClient()
 
-# define some help functions.
-def get_ingredient_score():
-    score_path = os.path.join(here, "ingredient_score.csv")
-    scores  = {}
-    ingredients = []
-    with open(score_path, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            ind = {}
-            ind['ingredient'] = row['ingredient']
-            ind['score'] = row['score']
-            ingredients.append(ind)
-
-            scores[row['ingredient']] = row['score']
-
-    return ingredients, scores
-
+# load up data
 ingredient_ls, scores = get_ingredient_score()
 ingredients_scored = scores.keys()
+    
+here = os.getcwd()
+file_name = 'ingredients_prediction.csv'
+file_path = os.path.join(here, file_name)
+ingredients = get_ingredients(file_path)
 
+pkl_name = 'ingredients.pkl'
+pkl_path = os.path.join(here, pkl_name)
+candies = get_candies(pkl_path, ingredients)
+
+# define some help functions.
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -114,10 +109,11 @@ def index_controller():
             file.save(file_path)
             return redirect(url_for('results_controller', filename=filename))
 
-    list1 = ingredient_ls[0:3]
-    list2 = ingredient_ls[3:6]
-    list3 = ingredient_ls[6:9]
-    return render_template('index.html', list1=list1, list2=list2, list3=list3)
+    good_candies = get_good_candies(candies, 5)
+    # good_candies = pack_ingredients(good_candies, ingredients)
+    bad_candies = get_bad_candies(candies, 5)
+    # bad_candies = pack_ingredients(bad_candies, ingredients)
+    return render_template('index.html', good_candies=good_candies, bad_candies=bad_candies, candies=candies)
 
 @app.route('/results/<filename>', methods=['GET'])
 def results_controller(filename):
@@ -148,9 +144,29 @@ def results_controller(filename):
     return render_template('results.html', descriptions=candy_ingredient_scores, filename=filename)
 
 
-@app.route('/algorithm', methods=['GET'])
+@app.route('/our_algorithm', methods=['GET'])
 def algorithm_controller():
-    return render_template('algorithm.html')
+    return render_template('our_algorithm.html')
+
+@app.route('/ingredients/<ind_name>', methods=['GET'])
+def ingredients_controller(ind_name):
+    ind = ind_name.replace('-', ' ')
+    ingredient = ingredients.get(ind)
+    return render_template('ingredients.html', ingredient=ingredient)
+
+@app.route('/all_candies', methods=['GET'])
+def all_candies_controller():
+    return render_template('all_candies.html', candies=candies)
+
+
+@app.route('/candies/<candy_name>', methods=['GET'])
+def candies_controller(candy_name):
+    candy_name = candy_name.replace('+', ' ')
+    for candy in candies:
+        if candy['candy_name'] == candy_name:
+            requested_candy = candy
+            break
+    return render_template('candies.html', candy=requested_candy)
 
 @app.route('/files/<path:filename>')
 def files(filename):
