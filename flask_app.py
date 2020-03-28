@@ -119,29 +119,30 @@ def index_controller():
 def results_controller(filename):
     here = os.getcwd()
     image_path = os.path.join(here, app.config['UPLOAD_FOLDER'], filename)
-    ingredient_list = detect_ingredients(client, image_path)
+    texts = detect_text(client, image_path)
+    # get all the words together
+    words = [t.description.lower() for t in texts]
+    paragraphs = ' '.join(words)
 
-    candy_ingredient_scores = []
-    # for each candy, loop through all the ingredients.
-    for ingredient in ingredient_list:
-        (best_match, best_match_score) = process.extractOne(ingredient, ingredients_scored)
-        if best_match_score > 90:
-            found_ingredient = best_match
-        else:
-            found_ingredient = None
+    # ingredient_list = detect_ingredients(client, image_path)
 
-        if found_ingredient is not None:
-            candy_ingredient_scores.append(
-                scores[found_ingredient]
-            )
-        else:
-            candy_ingredient_scores.append('could not find results in our database')
+    # candy_ingredient_scores = []
+    # # for each candy, loop through all the ingredients.
+    # for ingredient in ingredient_list:
+    #     (best_match, best_match_score) = process.extractOne(ingredient, ingredients_scored)
+    #     if best_match_score > 90:
+    #         found_ingredient = best_match
+    #     else:
+    #         found_ingredient = None
 
-    ingredients = [
-        {'candy_name': 'sugar', 'candy_score': -1},
-        {'candy_name': 'corn syrup', 'candy_score': -1}
-    ]
-    return render_template('results.html', descriptions=candy_ingredient_scores, filename=filename)
+    #     if found_ingredient is not None:
+    #         candy_ingredient_scores.append(
+    #             scores[found_ingredient]
+    #         )
+    #     else:
+    #         candy_ingredient_scores.append('could not find results in our database')
+
+    return render_template('results.html', filename=filename, paragraphs=paragraphs)
 
 
 @app.route('/our_algorithm', methods=['GET'])
