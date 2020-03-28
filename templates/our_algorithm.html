@@ -421,7 +421,6 @@
         .navbar {
             z-index: 100;
             width: 100%;
-            background-color: #90929d;
         }
         
         .navbar-fixed-top {
@@ -1405,7 +1404,7 @@
         .cid-rR1n8dA24N {
             padding-top: 6rem;
             padding-bottom: 6rem;
-            background-image: url("static/images/54e7dd4a4c55ab14ea89857dc22e3-h_k6ue9kc4.png");
+            background-image: url("/static/images/54e7dd4a4c55ab14ea89857dc22e3-h_k6ue9kc4.png");
             align-items: center;
             display: flex;
         }
@@ -1509,9 +1508,10 @@
 
 
     <meta name="theme-color" content="#20c763">
-    <link rel="manifest" href="static/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <!-- <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script> -->
-
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -1530,7 +1530,7 @@
 
             <!-- SOCIAL ICON END -->
             <!-- SHOW BUTTON -->
-            <div class="navbar-buttons mbr-section-btn"><a class="btn mbr-bold btn-primary display-7" href="/">Join AI Camp</a></div>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn mbr-bold btn-primary display-7" href="http://www.ai-camp.org" target="_blank">Join AI Camp</a></div>
             <!-- SHOW BUTTON END -->
         </div>
     </amp-sidebar>
@@ -1542,7 +1542,7 @@
                 <!-- SHOW LOGO -->
                 <div class="navbar-brand">
                     <div class="navbar-logo">
-                        <amp-img src="static/images/travel-1-h_k6ue2az8.png" layout="responsive" height="50" width="49.97131382673551" alt="" class="placeholder-loader">
+                        <amp-img src="/static/images/travel-1-h_k6ue2az8.png" layout="responsive" height="50" width="49.97131382673551" alt="" class="placeholder-loader">
                             <div placeholder="" class="placeholder">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
                                     <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
@@ -1551,7 +1551,7 @@
 
                         </amp-img>
                     </div>
-                    <span class="navbar-caption-wrap"><a class="navbar-caption mbr-bold text-info display-7" href="http://www.ai-camp.org" target="_blank"><span>AI Camp Candy Informant</span></a>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption mbr-bold text-info display-7" href="/"><span>AI Camp Candy Informant</span></a>
                     </span>
                 </div>
                 <!-- SHOW LOGO END -->
@@ -1583,343 +1583,56 @@
         <!-- </div> -->
     </section>
 
-    <section class="header1 cid-r8fHQnDxNh" id="header1-l">
-
-        <div class="mbr-overlay"></div>
-        <div class="container">
-            <div class="mbr-row align-left">
-                <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12">
-                    <h1 class="mbr-section-title mbr-fonts-style mbr-bold display-1">What's in our candy??</h1>
-                    <h2 class="mbr-section-subtitle mbr-fonts-style mbr-pt-3 display-5"><em>We built a deep learning model to read the internet to find out what's in our candy</em></h2>
-                    <p class="mbr-text mbr-fonts-style mbr-pt-2 display-7"><strong><a href="http://www.ai-camp.org">Built by students from AI Camp with help from our mentors.</a></strong></p>
-                    <div class="mbr-section-btn mbr-pt-4">
-                        <a class="btn-primary btn display-7" id='seefood_button'>
-                            <form id='seefood_form' method=post enctype=multipart/form-data>
-                                <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
-                            </form>
-                            <span class="mbri-camera mbr-iconfont mbr-iconfont-btn" style="font-size: 40px;"></span>Scan food label
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="header2 cid-r8Ci9VyBuB" id="header2-p">
-
-        <div class="mbr-overlay"></div>
-        <div class="container">
-            <div class="mbr-row mbr-black mbr-row-reverse">
-                <div class="title-wrap mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-6 align-left mbr-flex">
-                    <div class="title-block mbr-col-sm-12 mbr-col-md-12">
-                        <h1 class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-2">It's often not what it seems</h1>
-                        <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white mbr-pt-3 display-5">We often feed dangerous food to our children and do not know that we are doing so...</h2>
-                        <p class="mbr-text mbr-fonts-style mbr-white mbr-pt-2 display-7">Thus we used a deep learning model to learn about the ingredients in our food.</p>
-                        <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-primary-outline display-7" href="/our_algorithm">Learn more about our algorithm</a></div>
-                        <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-primary display-7" href="/all_candies">All candies we have studied</a></div>
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-6 mbr-flex">
-                    <div class="image-block mbr-col-md-12 mbr-col-sm-12 mbr-mr-auto">
-                        <amp-img src="static/images/57e0d04b4356b114a6d98478c12d3-h_k6ud9ycw.jpg" layout="responsive" width="522.6666666666666" height="392" alt="" class="placeholder-loader">
-                            <div placeholder="" class="placeholder">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                </svg></div>
-
-                        </amp-img>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="team1 cid-qYTHwdkO3f" id="team1-b">
 
         <div class="mbr-overlay"></div>
         <!--  -->
         <div class="container">
-
             <!-- BAD CANDIES -->
             <div class="title mbr-pb-5">
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-5">Really bad candies based on our study <br></h3>
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-7">
-                    These results are directly from our algorithms reading Google search results. Thus most likely, this will be consistent if you are doing this research yourself via searching on Google. The minimum score is -10, while the maximum score is 10. The more
-                    negative the scores are, the more articles we found on Google that said the ingredient is harmful for your health. The candy scores are just simple average of the ingredient scores.
-                    <br> <a href='/algorithm'>Read more about our algorithm here.</a></h3>
+                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-5">About our algorithms <br></h3>
                 <div class="line mbr-pt-3"></div>
             </div>
+
             <div class="mbr-row mbr-jc-c">
-                {% for candy in bad_candies %}
                 <div class="card mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12 md-pb lg-pb">
-                    <div class="card-wrapper mbr-flex">
+                    <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">
+                        How our website works.
+                    </p>
+                    <p class="mbr-text mbr-fonts-style display-7">Our product scans the ingredients from the photo uploaded by the user and prints a list of them on the website, using OCR. OCR, or Optical Character Recognition, is a software used to read text from a digital image. From a list of
+                        ingredients that we inputted into our code and the numbers we assigned them, we trained our website using functions to calculate an average score based off the ingredients it can read. The number presented in front of you is the
+                        average score of the ingredients our website was able to read. The higher the average score, the more we recommend a product.</p>
 
-                        <div class="card-img mbr-col-md-6 mbr-col-lg-3">
-                            <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Candy Name: {{candy.candy_name}}</h3>
-                            <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Candy Score: {{candy.score}}</h3>
-                            <img src="{{candy.image_url}}" layout="responsive" width="277.6216216216216" height="214" alt="" />
-                        </div>
-
-                        <div class="card-box2 mbr-m-auto mbr-col-md-12 mbr-col-lg-9">
-
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Bad Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.bad_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9">{{ind.bad_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Okay Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.ok_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9">{{ind.bad_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Good Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.good_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9"> {{ind.good_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-                {%endfor%}
-                <!--  -->
             </div>
-
-            <!-- GOOD CANDIES -->
-            <div class="title mbr-pb-5">
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-5">Good candies based on our study <br></h3>
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-7">
-                    These results are directly from our algorithms reading Google search results. Thus most likely, this will be consistent if you are doing this research yourself via searching on Google. The minimum score is -10, while the maximum score is 10. The more
-                    negative the scores are, the more articles we found on Google that said the ingredient is harmful for your health. The candy scores are just simple average of the ingredient scores.
-                    <br> <a href='/algorithm'>Read more about our algorithm here.</a></h3>
-                <div class="line mbr-pt-3"></div>
-            </div>
+            <!--  -->
             <div class="mbr-row mbr-jc-c">
-                {% for candy in good_candies %}
                 <div class="card mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12 md-pb lg-pb">
-                    <div class="card-wrapper mbr-flex">
+                    <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">
+                        List of ingredients.
+                    </p>
+                    <p class="mbr-text mbr-fonts-style display-7">We compiled a list of commonly found ingredients in candies and assigned them a number from -1 to 2. We uploaded the list into our code, so the website would be able to recognize ingredients in the product. Individual Scoring Key For
+                        Each Ingredient -1: Not recommended for consumption 0: Neutral 1: Recommended 2: Irrelevant After we assigned each ingredient a number, we coded our website to calculate an average score of the ingredients based off of the ones
+                        it could recognize from our list and their individual, assigned scores.
 
-                        <div class="card-img mbr-col-md-6 mbr-col-lg-3">
-                            <h3 class="card-title mbr-semibold mbr-fonts-style display-5">{{candy.candy_name}}</h3>
-                            <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Candy Score: {{candy.score}}</h3>
-                            <img src="{{candy.image_url}}" layout="responsive" width="277.6216216216216" height="214" alt="" />
-                        </div>
+                    </p>
 
-                        <div class="card-box2 mbr-m-auto mbr-col-md-12 mbr-col-lg-9">
-
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Bad Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.bad_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9">{{ind.bad_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Okay Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.ok_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9">{{ind.bad_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                            <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">Good Ingredients in this candy</p>
-                            <ul>
-                                {% for ind in candy.good_ingredients %}
-                                <li>
-                                    <p class="mbr-fonts-style mbr-bold display-7"><a href='/ingredients/{{ind.ingredient_name.replace(" ", "-")}}'>{{ind.ingredient_name}}</a>. Ingredient Score: {{ind.score}}</p>
-                                    <p class="mbr-fonts-style display-9">{{ind.good_articles[1]}}</p>
-                                </li>
-                                {% else %}
-                                <p>None</p>
-                                {%endfor%}
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-                {%endfor%}
-                <!--  -->
             </div>
+            <!--  -->
+            <div class="mbr-row mbr-jc-c">
+                <div class="card mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12 md-pb lg-pb">
+                    <p class="card-subtitle2 mbr-fonts-style mbr-bold display-7">
+                        What model did you use??
+                    </p>
+                    <p class="mbr-text mbr-fonts-style display-7">We used this deep learning model called BERT, where it had a good representation of our language. Then we used a two layers fully connected network for classification.</p>
+
+                </div>
+            </div>
+            <!--  -->
         </div>
-    </section>
 
-
-    <section class="team1 cid-rSeeRCKwyJ" id="team1-10">
-        <!--  -->
-        <div class="container">
-            <div class="title align-center">
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-2">AI Camp Team</h3>
-            </div>
-            <div class="mbr-row mbr-jc-c mbr-pt-4">
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 md-pb">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face1-h_k7fjo1su.jpg" layout="responsive" width="347.7710109622412" height="344" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Faguni Gupta</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Product Manager</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Student at Presentation High School.&nbsp;<br>Faguni is a natural leader and she contributed to the website frontend and the data extraction. She helped develop the initial idea for the app. She also enjoys dancing and working
-                                out in her free time.&nbsp;<br><br>Favorite Food: All foods that are vegetarian.&nbsp;<br><br></p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 md-pb">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face2-h_k7flxayc.jpg" layout="responsive" width="348.2083333333333" height="427" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Sriram Natarajan</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Full stack</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Student at Thornton Middle School. <br>Sriram is enthusiastic about everything he does and contributed to both the website frontend and backend design as well as data extraction. He enjoys playing basketball and doing speech
-                                and debate in his free time.&nbsp;<br><br>Favorite Food: Chow Mein</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 last-child">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face3-h_k7fjbjvh.jpg" layout="responsive" width="347.9294117647059" height="371" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Sai Rithika Sivakumar</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Design and frontend</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Student at Milpitas High School. <br>Rithika contributed to the website frontend and the data extraction. She enjoys singing and volunteering in her free time. She also enjoys learning about AI and its applications as much
-                                as she loves snacking!&nbsp;<br><br>Favorite Food: Potatoes</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-
-            </div>
         </div>
-    </section>
-
-    <section class="team1 cid-rSeeTnRKOx" id="team1-11">
-
-
-        <!--  -->
-        <div class="container">
-            <div class="title align-center">
-                <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-2"></h3>
-            </div>
-            <div class="mbr-row mbr-jc-c mbr-pt-4">
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 md-pb">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face1-h_k7r55kwv.jpg" layout="responsive" width="347.753125" height="433" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Justin Lee</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Backend</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Student at Francisco Middle School. Justin contributed to the backend design and data extraction. He enjoys [...] in his free time.&nbsp;<br><br>Favorite Food: Bread</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 md-pb">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face2-h_k7fjr9ed.jpg" layout="responsive" width="347.70106761565836" height="472" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Steffi Matthew</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Backend</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Student at Westmont High School. Steffi contributed to the backend design and data extraction. She enjoys coding, singing and playing piano in her free time. She also enjoys writing for loops ;)<br><br>Favorite Food: Hot Cheetos.&nbsp;</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="card mbr-col-sm-12 mbr-col-md-4 mbr-col-lg-4 last-child">
-                    <div class="card-wrapper">
-                        <div class="card-img">
-                            <amp-img class="placeholder-loader" src="/static/images/face3-h_k7fjdc22.jpg" layout="responsive" width="348" height="348" alt="">
-                                <div placeholder="" class="placeholder">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                                        <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
-                                        <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
-                                    </svg></div>
-
-                            </amp-img>
-                        </div>
-                        <div class="card-box mbr-pt-3">
-                            <h3 class="card-title mbr-bold mbr-fonts-style display-5">Michael K. Zhang</h3>
-                            <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Mentor</h4>
-                            <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Dr. Zhang is a Stanford graduate. He taught the team practically everything they know in terms of AI and ML. He enjoys cycling and fishing in his free time. His personal philosophy is that many things are not easy but they
-                                are worth the effort in the long run.&nbsp;<br><br>Favorite Food: Fried crispy Calamari with spicy sauce.&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-
-            </div>
         </div>
     </section>
 
@@ -1937,7 +1650,6 @@
             </div>
         </div>
     </section>
-
     <section class="footer1 cid-qYYTKZPvis" id="footer1-h">
 
 
@@ -1957,16 +1669,6 @@
 
 
 
-    <amp-install-serviceworker src="sw.js" layout="nodisplay"></amp-install-serviceworker>
 </body>
-
-<script>
-    // added to get upload with a button working
-    document.getElementById('seefood_button').addEventListener('click', openDialog);
-
-    function openDialog() {
-        document.getElementById('seefood_input_field').click();
-    }
-</script>
 
 </html>

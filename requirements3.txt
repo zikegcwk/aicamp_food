@@ -1,15 +1,4 @@
 Flask==1.0.2
-Flask-Admin==1.5.1
-Flask-Babel==0.11.2
-Flask-Bcrypt==0.7.1
-Flask-Bootstrap==3.3.7.1
-Flask-HTTPAuth==3.2.4
-Flask-Login==0.4.1
-Flask-RESTful==0.3.6
-Flask-Script==2.0.6
-Flask-SQLAlchemy==2.3.2
-Flask-SSLify==0.1.5
-Flask-WTF==0.14.2
 google-api-core==1.16.0
 google-api-python-client==1.7.4
 google-auth==1.5.1
@@ -17,3 +6,6 @@ google-auth-httplib2==0.0.3
 google-cloud-vision==0.41.0
 googleapis-common-protos==1.51.0
 ipython==4.1.2
+fuzzywuzzy==0.18.0
+grpcio-tools==1.27.2
+grpcio==1.27.2
