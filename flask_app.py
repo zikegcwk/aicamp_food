@@ -4,7 +4,7 @@ import csv
 import os
 import io
 from werkzeug.utils import secure_filename
-from fuzzywuzzy import process
+from rapidfuzz import process
 from data_loading import get_ingredient_score, get_candies, get_ingredients, get_good_candies, get_bad_candies
 import random
 
@@ -61,15 +61,10 @@ def detect_ingredients(client, path):
 
     ##### find the start and the end #######
     # find the ingredients mark.
-    (val, ratio) = process.extractOne('ingredient', words)
+    result = process.extractOne('ingredient', words, score_cutoff=90)
 
-    if ratio > 90:
-        ingredient_mark_found = True
-    else:
-        ingredient_mark_found = False
-
-    if ingredient_mark_found:
-        ingredient_idx = words.index(val)
+    if result:
+        ingredient_idx = words.index(result[0])
         str_ingredients = ' '.join(words[ingredient_idx + 1:])
     else:
         str_ingredients = ' '.join(words)

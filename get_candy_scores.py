@@ -1,6 +1,6 @@
 # read all the ingredient lists from csv
 import csv
-from fuzzywuzzy import process
+from rapidfuzz import process
 from pprint import pprint
 
 def get_candy_ingredients():
@@ -43,10 +43,9 @@ def calculate_average_score(new_ingredient_list, score_dict):
     for ingredient in new_ingredient_list:
         ingredient = ingredient.lower()
 
-        found_ingredients, ratio = process.extractOne(ingredient, known_ingredients)
-
-        if ratio > 80:
-            ingredient_score_str = score_dict[found_ingredients]
+        result = process.extractOne(ingredient, known_ingredients, score_cutoff=80)
+        if result:
+            ingredient_score_str = score_dict[result[0]]
             ingredient_score = float(ingredient_score_str)
             scores.append(ingredient_score)
         else:

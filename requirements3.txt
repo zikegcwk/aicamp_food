@@ -6,6 +6,6 @@ google-auth-httplib2==0.0.3
 google-cloud-vision==0.41.0
 googleapis-common-protos==1.51.0
 ipython==4.1.2
-fuzzywuzzy==0.18.0
+rapidfuzz==0.3.0
 grpcio-tools==1.27.2
 grpcio==1.27.2
